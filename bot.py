@@ -8,7 +8,7 @@ from misc.constants import token
 
 
 async def main() -> None:
-    bot = Bot(token=token, parse_mode="MarkdownV2")
+    bot = Bot(token=token, parse_mode="HTML")
     dp = Dispatcher()
 
     logging.basicConfig(level=logging.INFO)

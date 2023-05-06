@@ -5,8 +5,12 @@ name = "pypi"
 
 [packages]
 aiogram = "==3.0.0b7"
+simplejson = "*"
+pillow = "*"
+torch = "*"
+torchvision = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.8"
+python_version = "3.11.3"

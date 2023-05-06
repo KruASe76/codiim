@@ -7,7 +7,7 @@ from misc.constants import admin_ids
 class BotAdminMessageFilter(BaseFilter):
     async def __call__(self, message: Message) -> bool:
         if flag := (message.from_user.id not in admin_ids):
-            await message.reply("Ты не господь\! 🫵")
+            await message.reply("Ты не господь! 🫵")
         return not flag
 
 

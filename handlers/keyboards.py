@@ -1,8 +1,11 @@
-from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from aiogram.types import (
+    InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardRemove
+)
 
+
+empty = ReplyKeyboardRemove()
 
 admin = InlineKeyboardMarkup(
-    row_width=1,
     inline_keyboard=[
         [
             InlineKeyboardButton(
