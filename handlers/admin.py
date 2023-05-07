@@ -9,16 +9,14 @@ from handlers import keyboards as kb
 
 
 router = Router()
-router.message.filter(BotAdminMessageFilter())
-router.callback_query.filter(BotAdminCallbackFilter())
 
 
-@router.message(Command(commands=["god"]))
+@router.message(Command(commands=["god"]), BotAdminMessageFilter())
 async def admin_panel_command(message: Message):
     await message.answer("Здравствуй, Господи!", reply_markup=kb.admin)
 
 
-@router.callback_query(Text(text="shutdown"))
+@router.callback_query(Text(text="shutdown"), BotAdminCallbackFilter())
 async def shutdown_query(callback: CallbackQuery):
     await callback.answer()
     await callback.message.answer("Бот уходит в закат...")

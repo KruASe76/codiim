@@ -1,7 +1,7 @@
 from pathlib import Path
 
 import torch
-from torchvision.models import EfficientNet_B5_Weights as base_model_weights
+from torchvision.models import EfficientNet_B4_Weights as base_model_weights
 from PIL import Image
 
 from misc.constants import resources_dir, Emotion
